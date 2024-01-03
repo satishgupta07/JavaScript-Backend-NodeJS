@@ -32,3 +32,9 @@
 - Purpose: A refresh token is a long-lived token used to obtain a new access token when the current access token expires. It's not meant for direct access to resources but rather for obtaining fresh access tokens.
 - Usage: When the access token expires, the client sends the refresh token to the authorization server, requesting a new access token. The refresh token is more secure because it is only exchanged directly with the authorization server, reducing the exposure of the access token.
 - Expiration: Refresh tokens have a longer lifespan compared to access tokens. They can last for days, weeks, or even months. However, they should still have an expiration time to enhance security.
+
+### multer
+Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files.
+The multer.diskStorage function is used to configure the storage engine for handling uploaded files. In this case, it's configured with two functions:
+- destination: This function determines the destination directory where uploaded files will be stored. In this example, it's set to "./public/temp".
+- filename: This function determines the name of the uploaded file. Here, it's set to the original name of the file.
